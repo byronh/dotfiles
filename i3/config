@@ -1,4 +1,6 @@
-# Modifier key
+# Variables
+set $screen1 DVI-0
+set $screen2 HDMI-0
 set $mod Mod4
 
 # Window titles
@@ -77,13 +79,13 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# Restart i3
 bindsym $mod+Shift+r restart
 
-# Exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# Exit i3 (logs out of X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -b 'Yes' 'i3-msg exit'"
 
-# Resize window (you can also use the mouse for that)
+# Resize window
 bindsym $mod+r mode "resize"
 mode "resize" {
     bindsym j resize shrink width 10 px or 10 ppt
@@ -98,16 +100,29 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+# Spacing
+# gaps inner 30
+
 # Window colors
 client.focused          #d8ad4c #d8ad4c #000000
 client.unfocused        #3b3b3b #3b3b3b #888888
 client.focused_inactive #2C2D2E #2C2D2E #888888
 client.urgent           #99ad6a #99ad6a #888888
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Status bars
 bar {
     status_command i3status
+    position bottom
+    font pango:Droid Sans Mono 14px
+    colors {
+        background          #050505
+        separator           #888888
+        statusline          #d8ad4c 
+        focused_workspace   #d8ad4c #d8ad4c #000000
+        active_workspace    #2c2d2e #2c2d2e #888888
+        inactive_workspace  #3b3b3b #3b3b3b #888888
+        urgent_workspace    #ff5522 #ff5522 #eeeeee
+    }
 }
 
 # Disable window borders
@@ -125,5 +140,5 @@ exec pkill redshift
 # Start initial programs
 exec i3-msg 'workspace 1; exec chromium'
 
-# Start terminal
+# Application hotkeys
 bindsym $mod+Return exec i3-sensible-terminal
