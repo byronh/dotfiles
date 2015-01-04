@@ -2,10 +2,7 @@
 set $mod Mod4
 
 # Window titles
-font pango:Droid Sans 12px
-
-# Start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+font pango:Droid Sans Mono 14px
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -54,8 +51,8 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # Switch to workspace
-bindsym $mod+1 workspace 1:web
-bindsym $mod+2 workspace 2:code
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
@@ -101,6 +98,12 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+# Window colors
+client.focused          #d8ad4c #d8ad4c #000000
+client.unfocused        #3b3b3b #3b3b3b #888888
+client.focused_inactive #2C2D2E #2C2D2E #888888
+client.urgent           #99ad6a #99ad6a #888888
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -111,4 +114,16 @@ bar {
 for_window [class="Chromium"] border none
 for_window [class="Firefox"] border none
 
+# Workspace assignments
+assign [class="Chromium"] 1
+assign [class="URxvt"] 2
+
+# Run display scripts
 exec --no-startup-id ~/dotfiles/scripts/wallpaper.sh
+exec pkill redshift
+
+# Start initial programs
+exec i3-msg 'workspace 1; exec chromium'
+
+# Start terminal
+bindsym $mod+Return exec i3-sensible-terminal

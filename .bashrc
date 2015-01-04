@@ -13,3 +13,4 @@ alias rm="rm -i"
 
 alias bashrc='vim ~/.bashrc && source ~/.bashrc'
 alias pacman='sudo pacman --color auto'
+alias pacfreeze='pacman -Qqen > ~/dotfiles/pkglist.txt'

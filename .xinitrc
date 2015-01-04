@@ -3,6 +3,9 @@
 # Disable mouse acceleration
 xset m 1 0
 
+# Turn off beep
+xset -b
+
 # Set caps lock key as mod for i3
 xmodmap ~/.Xmodmap
 
