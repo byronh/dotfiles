@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=(.bashrc .gitconfig .vimrc .xinitrc .Xresources .Xmodmap)
+files=(.bashrc .gitconfig .tmux.conf .vimrc .xinitrc .Xresources .Xmodmap)
 
 cd
 
