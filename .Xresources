@@ -10,14 +10,16 @@
 !URxvt.transparent:      true
 !URxvt*.shading: 10
 
-URxvt.font: xft:DejavuSansMono:size=9
-URxvt.scrollBar: false
-URxvt.urgentOnBell: true
+URxvt*background: [50]#000000
+URxvt.font:             xft:DejavuSansMono:size=9
+URxvt.scrollBar:        false
+URxvt.urgentOnBell:     true
 URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher:      /usr/bin/google-chrome
+URxvt.url-launcher:     /usr/bin/chromium
 URxvt.matcher.button:   3
-URxvt*termName: rxvt-unicode-256color
-URxvt.depth: 32
+URxvt*termName:         rxvt-unicode-256color
+URxvt.transparent:      true
+URxvt.depth:            32
 
 ! Meta modifier for keybindings
 !URxvt.modifier: super
@@ -42,7 +44,7 @@ URxvt.iso14755_52: false
 
 !urxvt color scheme:
 
-URxvt*background: #2B2B2B
+!URxvt*background: #2B2B2B
 URxvt*foreground: #DEDEDE
 
 URxvt*colorUL: #86a2b0

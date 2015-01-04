@@ -9,5 +9,7 @@ xmodmap ~/.Xmodmap
 # Setup dual monitor
 xrandr --output DVI-0 --left-of HDMI-0
 
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 # Start window manager
 exec i3
