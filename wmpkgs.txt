@@ -1,0 +1,14 @@
+chromium
+dmenu
+feh
+i3-wm
+i3status
+redshift
+rxvt-unicode
+rxvt-unicode-terminfo
+ttf-dejavu
+ttf-droid
+xclip
+xorg-server
+xorg-server-utils
+xorg-xinit

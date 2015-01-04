@@ -1,6 +1,4 @@
 # Variables
-set $screen1 DVI-0
-set $screen2 HDMI-0
 set $mod Mod4
 
 # Window titles
@@ -100,9 +98,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-# Spacing
-# gaps inner 30
-
 # Window colors
 client.focused          #d8ad4c #d8ad4c #000000
 client.unfocused        #3b3b3b #3b3b3b #888888
@@ -128,6 +123,7 @@ bar {
 # Disable window borders
 for_window [class="Chromium"] border none
 for_window [class="Firefox"] border none
+#for_window [class="URxvt"] border none
 
 # Workspace assignments
 assign [class="Chromium"] 1
@@ -139,6 +135,7 @@ exec pkill redshift
 
 # Start initial programs
 exec i3-msg 'workspace 1; exec chromium'
+exec urxvt
 
 # Application hotkeys
 bindsym $mod+Return exec i3-sensible-terminal

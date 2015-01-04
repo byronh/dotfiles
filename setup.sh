@@ -12,4 +12,5 @@ done
 mkdir -p ~/.i3
 ln -f -s ~/dotfiles/i3/config ~/.i3/config
 
-mkdir -p ~/.wallpapers
+mkdir -p ~/.wallpapers ~/.scripts
+touch ~/.scripts/displays.sh
