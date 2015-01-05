@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=(.bashrc .gitconfig .tmux.conf .vimrc .xinitrc .Xresources .Xmodmap)
+files=(.bashrc .conkyrc .gitconfig .i3status.conf .tmux.conf .vimrc .xinitrc .Xresources .Xmodmap)
 
 cd
 
@@ -14,3 +14,5 @@ ln -f -s ~/dotfiles/i3/config ~/.i3/config
 
 mkdir -p ~/.wallpapers ~/.scripts
 touch ~/.scripts/displays.sh
+
+sudo usermod -aG log byron

@@ -10,6 +10,9 @@ bindsym $mod+Shift+q kill
 # Start dmenu
 bindsym $mod+d exec dmenu_run
 
+# Lock screen
+bindsym $mod+Ctrl+Shift+l exec zsh ~/dotfiles/scripts/lock-screen.zsh
+
 # Change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -122,11 +125,15 @@ bar {
 
 # Disable window borders
 for_window [class="Chromium"] border none
-for_window [class="Firefox"] border none
-#for_window [class="URxvt"] border none
+for_window [class="Conky"] border none
+for_window [class="jetbrains-pycharm"] border none
+for_window [class="P4V"] border none 
+for_window [class="URxvt"] border none
 
 # Workspace assignments
 assign [class="Chromium"] 1
+assign [class="jetbrains-pycharm"] 3
+assign [class="P4V"] 4
 assign [class="URxvt"] 2
 
 # Run display scripts
@@ -135,7 +142,8 @@ exec pkill redshift
 
 # Start initial programs
 exec i3-msg 'workspace 1; exec chromium'
-exec urxvt
+exec urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
+exec xautolock -time 5 -secure -locker 'zsh ~/dotfiles/scripts/lock-screen.zsh'
 
 # Application hotkeys
 bindsym $mod+Return exec i3-sensible-terminal

@@ -3,12 +3,16 @@ dmenu
 feh
 i3-wm
 i3status
+imagemagick
 redshift
 rxvt-unicode
 rxvt-unicode-terminfo
 ttf-dejavu
 ttf-droid
+xautolock
 xclip
 xorg-server
 xorg-server-utils
 xorg-xinit
+xorg-xprop
+zsh
