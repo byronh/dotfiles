@@ -14,3 +14,7 @@ alias rm="rm -i"
 alias bashrc='vim ~/.bashrc && source ~/.bashrc'
 alias pacman='sudo pacman --color auto'
 alias pacfreeze='pacman -Qqen > ~/dotfiles/pkglist.txt'
+alias systemctl='sudo systemctl'
+
+alias officevpn='cd ~/vpn && sudo openvpn --writepid /var/run/openvpn/office.pid office.ovpn'
+alias devvpn='cd ~/vpn && sudo openvpn --writepid /var/run/openvpn/dev.pid dev.ovpn'
