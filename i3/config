@@ -115,12 +115,17 @@ bar {
 for_window [class="Chromium"] border none
 for_window [class="Conky"] border none
 for_window [class="jetbrains-pycharm"] border none
+for_window [class="jetbrains-idea"] border none
 for_window [class="P4V"] border none 
 for_window [class="URxvt"] border none
+
+# Special floating windows
+for_window [title="Astro"] floating enable
 
 # Workspace assignments
 assign [class="Chromium"] 1
 assign [class="jetbrains-pycharm"] 3
+assign [class="jetbrains-idea"] 3
 assign [class="P4V"] 4
 assign [class="URxvt"] 2
 
