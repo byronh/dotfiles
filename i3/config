@@ -114,6 +114,7 @@ bar {
 # Disable window borders
 for_window [class="Chromium"] border none
 for_window [class="Conky"] border none
+for_window [class="jetbrains-clion"] border none
 for_window [class="jetbrains-pycharm"] border none
 for_window [class="jetbrains-idea"] border none
 for_window [class="P4V"] border none 

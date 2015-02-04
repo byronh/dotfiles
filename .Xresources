@@ -3,7 +3,7 @@
 URxvt*background:       [50]#000000
 URxvt*borderless:       1
 URxvt.depth:            32
-URxvt.font:             xft:DroidSansMono:size=12:antialias=true:hint=true
+URxvt.font:             xft:DroidSansMono:size=10:antialias=true:hint=true
 URxvt.matcher.button:   3
 URxvt.perl-ext-common:  default,matcher
 URxvt*saveLines:        4000
