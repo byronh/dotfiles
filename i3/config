@@ -11,7 +11,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # Lock screen
-bindsym $mod+l exec zsh ~/dotfiles/scripts/lock-screen.zsh
+bindsym $mod+l exec python ~/dotfiles/scripts/lock_screen.py
+
+# Reload wallpaper
+bindsym $mod+p exec python ~/dotfiles/scripts/wallpaper.py
 
 # Change focus
 bindsym $mod+Left focus left
@@ -24,6 +27,10 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# Move workspace to another monitor
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
 
 # Split in horizontal orientation
 bindsym $mod+h split h
@@ -113,11 +120,12 @@ bar {
 
 # Disable window borders
 for_window [class="Chromium"] border none
-for_window [class="Conky"] border none
 for_window [class="jetbrains-clion"] border none
 for_window [class="jetbrains-pycharm"] border none
 for_window [class="jetbrains-idea"] border none
 for_window [class="jetbrains-webstorm"] border none
+for_window [class="MonoDevelop"] border none
+for_window [class="P4V"] border none
 for_window [class="QtCreator"] border none
 for_window [class="URxvt"] border none
 
@@ -132,16 +140,16 @@ assign [class="jetbrains-clion"] 4
 assign [class="jetbrains-webstorm"] 3
 assign [class="QtCreator"] 4
 assign [class="P4V"] 4
-assign [class="URxvt"] 2
+# assign [class="URxvt"] 2
 
 # Run display scripts
-exec --no-startup-id ~/dotfiles/scripts/wallpaper.sh
+exec --no-startup-id python ~/dotfiles/scripts/wallpaper.py
 exec pkill redshift
 
 # Start initial programs
 exec i3-msg 'workspace 1; exec chromium'
 exec urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
-exec xautolock -time 20 -secure -locker 'zsh ~/dotfiles/scripts/lock-screen.zsh'
+exec xautolock -time 20 -secure -locker 'python ~/dotfiles/scripts/lock_screen.py'
 
 # Application hotkeys
 bindsym $mod+Return exec i3-sensible-terminal
