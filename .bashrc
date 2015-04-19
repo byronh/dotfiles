@@ -7,6 +7,7 @@ export PS1="\[\e[00;37m\]\n[\[\e[0m\]\[\e[00;33m\]\@\[\e[0m\]\[\e[00;37m\] \[\e[
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 source /usr/bin/virtualenvwrapper.sh
+source /usr/share/doc/pkgfile/command-not-found.bash
 
 alias ls='ls -F --color=auto'
 alias ll='ls -lhaF --color=auto'
@@ -22,3 +23,5 @@ alias poweroff='sudo systemctl poweroff'
 
 alias officevpn='cd ~/vpn && sudo openvpn --writepid /var/run/openvpn/office.pid office.ovpn'
 alias devvpn='cd ~/vpn && sudo openvpn --writepid /var/run/openvpn/dev.pid dev.ovpn'
+
+alias hhfiles='sudo mount -t cifs //FILES/hothead /mnt/hhfiles -o user=username && cd /mnt/hhfiles'
