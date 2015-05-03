@@ -13,12 +13,12 @@ interfaces = netifaces.interfaces()
 if 'lo' in interfaces:
     interfaces.remove('lo')
 
-# pip: i3pystatus netifaces colour keyring basiciw
-# aur: python-pywapi
+# pip: netifaces colour keyring basiciw
+# aur: i3pystatus-git
 status.register('alsa')
 status.register('clock', format='%T %p')
 status.register('clock', format='%a %B %d %Y')
-status.register('weather', location_code='CAXX0518')
+status.register('weather', location_code='CAXX0518', interval=60)
 status.register('text', text='{}@{}'.format(username, hostname))
 status.register('load', format='load {avg1}')
 status.register('mem',
