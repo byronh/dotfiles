@@ -4,6 +4,12 @@ set $mod Mod4
 # Window titles
 font pango:Droid Sans Mono 14px
 
+# Window gaps
+gap_size 12
+
+# Navigation
+workspace_auto_back_and_forth yes
+
 # Kill focused window
 bindsym $mod+Shift+q kill
 
@@ -97,7 +103,7 @@ mode "resize" {
 }
 
 # Window colors
-client.focused          #d8ad4c #d8ad4c #000000
+client.focused          #d8ad4c #d8ad4c #000000 #d8ad4c
 client.unfocused        #3b3b3b #3b3b3b #888888
 client.focused_inactive #2C2D2E #2C2D2E #888888
 client.urgent           #99ad6a #99ad6a #888888
@@ -118,29 +124,16 @@ bar {
     }
 }
 
-# Disable window borders
-for_window [class="Chromium"] border none
-for_window [class="jetbrains-clion"] border none
-for_window [class="jetbrains-pycharm"] border none
-for_window [class="jetbrains-idea"] border none
-for_window [class="jetbrains-webstorm"] border none
-for_window [class="MonoDevelop"] border none
-for_window [class="P4V"] border none
-for_window [class="QtCreator"] border none
-for_window [class="URxvt"] border none
 
-# Special floating windows
-for_window [title="Astro"] floating enable
+# Window borders
+new_window pixel 2
 
 # Workspace assignments
 assign [class="Chromium"] 1
 assign [class="jetbrains-pycharm"] 3
 assign [class="jetbrains-idea"] 3
-assign [class="jetbrains-clion"] 4
+assign [class="jetbrains-clion"] 3
 assign [class="jetbrains-webstorm"] 3
-assign [class="QtCreator"] 4
-assign [class="P4V"] 4
-# assign [class="URxvt"] 2
 
 # Run display scripts
 exec --no-startup-id python ~/dotfiles/scripts/wallpaper.py
@@ -148,7 +141,6 @@ exec pkill redshift
 
 # Start initial programs
 exec i3-msg 'workspace 1; exec chromium'
-exec urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
 exec xautolock -time 20 -secure -locker 'python ~/dotfiles/scripts/lock_screen.py'
 
 # Application hotkeys
