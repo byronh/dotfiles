@@ -21,7 +21,7 @@ alias pacman='sudo pacman --color auto'
 alias pacfreeze='pacman -Qqen > ~/dotfiles/pkglist.txt'
 alias poweroff='sudo systemctl poweroff'
 
-alias officevpn='cd ~/vpn && sudo openvpn --writepid /var/run/openvpn/office.pid office.ovpn'
-alias devvpn='cd ~/vpn && sudo openvpn --writepid /var/run/openvpn/dev.pid dev.ovpn'
+alias officevpn='cd ~/.vpn && sudo openvpn --writepid /var/run/openvpn/office.pid office.ovpn'
+alias devvpn='cd ~/.vpn && sudo openvpn --writepid /var/run/openvpn/dev.pid dev.ovpn'
 
 alias hhfiles='sudo mount -t cifs //FILES/hothead /mnt/hhfiles -o user=username && cd /mnt/hhfiles'
