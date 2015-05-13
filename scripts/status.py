@@ -13,7 +13,7 @@ interfaces = netifaces.interfaces()
 if 'lo' in interfaces:
     interfaces.remove('lo')
 
-# pip: netifaces colour keyring basiciw
+# pip: pyalsaaudio netifaces colour keyring basiciw psutil
 # aur: i3pystatus-git
 status.register('alsa')
 status.register('clock', format='%T %p')
