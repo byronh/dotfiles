@@ -6,7 +6,10 @@ import socket
 
 
 status = i3pystatus.Status(standalone=True)
+
 default_color = '#d8ad4c'
+inactive_color = '#3b3b3b'
+
 username = pwd.getpwuid(os.getuid()).pw_name
 hostname = socket.gethostname()
 interfaces = netifaces.interfaces()
@@ -31,6 +34,7 @@ for interface in interfaces:
                     interface=interface,
                     format_up='{interface}={v4}',
                     format_down='{interface}',
-                    color_up=default_color)
+                    color_up=default_color,
+                    color_down=inactive_color)
 
 status.run()
