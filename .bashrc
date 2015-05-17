@@ -25,3 +25,5 @@ alias officevpn='cd ~/.vpn && sudo openvpn --writepid /var/run/openvpn/office.pi
 alias devvpn='cd ~/.vpn && sudo openvpn --writepid /var/run/openvpn/dev.pid dev.ovpn'
 
 alias hhfiles='sudo mount -t cifs //FILES/hothead /mnt/hhfiles -o user=username && cd /mnt/hhfiles'
+
+alias jsxw='cd ~/dev/dashto.net/dashto/static && jsx -w -x jsx jsx/ js/'
