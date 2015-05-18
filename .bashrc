@@ -26,4 +26,4 @@ alias devvpn='cd ~/.vpn && sudo openvpn --writepid /var/run/openvpn/dev.pid dev.
 
 alias hhfiles='sudo mount -t cifs //FILES/hothead /mnt/hhfiles -o user=username && cd /mnt/hhfiles'
 
-alias jsxw='cd ~/dev/dashto.net/dashto/static && jsx -w -x jsx jsx/ js/'
+alias jsxw='cd ~/dev/dashto.net/dashto/static && jsx --no-cache-dir -w -x jsx jsx/ js/'
