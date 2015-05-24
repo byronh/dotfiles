@@ -3,3 +3,5 @@
 	name = Byron Henze
 [credential]
 	helper = cache --timeout=7200
+[push]
+	default = simple
