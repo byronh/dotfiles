@@ -135,13 +135,17 @@ assign [class="jetbrains-idea"] 3
 assign [class="jetbrains-clion"] 3
 assign [class="jetbrains-webstorm"] 3
 
+assign [class="Server Farm"] 2
+for_window [class="Server Farm"] floating enable
+
 # Run display scripts
 exec --no-startup-id python ~/dotfiles/scripts/wallpaper.py
 exec pkill redshift
 
 # Start initial programs
+exec i3-msg 'workspace 2; exec i3-sensible-terminal'
 exec i3-msg 'workspace 1; exec chromium'
-exec xautolock -time 20 -secure -locker 'python ~/dotfiles/scripts/lock_screen.py'
+exec xautolock -time 5 -secure -locker 'python ~/dotfiles/scripts/lock_screen.py'
 
 # Application hotkeys
 bindsym $mod+Return exec i3-sensible-terminal
