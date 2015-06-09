@@ -20,7 +20,7 @@ alias mv="mv -i"
 alias rm="rm -i"
 
 alias bashrc='vim ~/.bashrc && source ~/.bashrc'
-alias pacman='sudo pacman --color auto'
+alias pacman='pacman --color auto'
 alias pacfreeze='pacman -Qqen > ~/dotfiles/pkglist.txt'
 alias poweroff='sudo systemctl poweroff'
 
