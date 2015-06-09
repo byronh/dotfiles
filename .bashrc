@@ -9,7 +9,7 @@ export PROJECT_HOME=$HOME/dev
 source /usr/bin/virtualenvwrapper.sh
 source /usr/share/doc/pkgfile/command-not-found.bash
 
-alias startx='startx &> ~/.xlog'
+#alias startx='startx &> ~/.xlog'
 alias stopx='pkill X'
 
 alias ls='ls -F --color=auto'

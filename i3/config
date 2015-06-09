@@ -144,7 +144,6 @@ exec pkill redshift
 
 # Start initial programs
 exec i3-msg 'workspace 2; exec i3-sensible-terminal'
-exec i3-msg 'workspace 1; exec chromium'
 exec xautolock -time 5 -secure -locker 'python ~/dotfiles/scripts/lock_screen.py'
 
 # Application hotkeys
