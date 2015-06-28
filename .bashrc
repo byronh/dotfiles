@@ -26,3 +26,5 @@ alias poweroff='sudo systemctl poweroff'
 alias hhfiles='sudo mount -t cifs //FILES/hothead /mnt/hhfiles -o user=username && cd /mnt/hhfiles'
 
 alias jsxw='cd ~/dev/dashto.net/dashto/static && jsx --no-cache-dir -w -x jsx jsx/ js/'
+
+alias fixsteam='find ~/.steam/root/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" \) -print -delete'
