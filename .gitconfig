@@ -2,6 +2,7 @@
 	email = byronh@gmail.com
 	name = Byron Henze
 [credential]
-	helper = cache --timeout=7200
+	helper = !aws --profile codecommit codecommit credential-helper $@
+	UseHttpPath = true
 [push]
 	default = simple
