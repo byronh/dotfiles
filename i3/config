@@ -130,21 +130,18 @@ bar {
 new_window pixel 2
 
 # Workspace assignments
+assign [class="Android SDK Manager"] 4
 assign [class="Chromium"] 1
 assign [class="jetbrains-pycharm"] 3
 assign [class="jetbrains-idea"] 3
 assign [class="jetbrains-clion"] 4
 assign [class="jetbrains-webstorm"] 3
+assign [class="jetbrains-studio"] 3
 
 assign [class="Steam"] 5
 for_window [class="Steam"] floating enable
 assign [class="steam"] 5
 for_window [class="steam"] floating enable
-
-assign [class="Server Farm"] 2
-for_window [class="Server Farm"] floating enable
-assign [class="Astro"] 2
-for_window [class="Astro"] floating enable
 
 # Run display scripts
 exec --no-startup-id python ~/dotfiles/scripts/wallpaper.py
@@ -158,5 +155,4 @@ exec xautolock -time 10 -secure -locker 'python ~/dotfiles/scripts/lock_screen.p
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+j exec intellij-idea-ultimate-edition
 bindsym $mod+Shift+o exec chromium
-bindsym $mod+Shift+p exec pycharm-eap
 bindsym $mod+Shift+s exec steam
